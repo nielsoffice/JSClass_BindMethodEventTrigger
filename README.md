@@ -78,6 +78,18 @@ console.log(multiplyByTwo(4)); // Result 8
 
 let multiplyByTen = multiply.bind(this, 10);
 console.log(multiplyByTen(10)); // Result 100
+
+// DEMO 3
+function dataTester(data,requirement) {
+   if(Array.isArray(data)) { return data +' are a plural store in array ' + requirement; } 
+   else { return data +' is a singular not array ' + requirement; }
+}
+
+let dataTesterUsers = dataTester.bind(this, ['one','tine']);
+console.log(dataTesterUsers('Correct!'));
+
+let dataTesterUser = dataTester.bind(this, 'Tame');
+console.log(dataTesterUser('Correct!'));
 ```
 
 ```JS
@@ -86,6 +98,9 @@ console.log(multiplyByTen(10)); // Result 100
  
  8
  100
+ 
+one,tine are a plural store in array Correct!
+Tame is a singular not array Correct!
 ```
 
 ```JS
