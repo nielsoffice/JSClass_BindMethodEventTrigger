@@ -71,6 +71,10 @@ console.log(getfullName());
 // Demo 1B 
 // Inherit the all method and propertiest of Primary method
 frontEnd.__proto__ = Developer;
+// OR 
+// Is Developer Prototype of frontEnd?? 
+// Is Developer give something to frontEnd?? // Result YES 
+console.log(Developer.isPrototypeOf(frontEnd)); // True < Developer give all methods and properties >
 console.log(frontEnd.getFullName()); // Niel Fernandez 
 console.log(frontEnd.advancetage); // true
 
