@@ -68,6 +68,12 @@ const frontEnd = {
 let getfullName = Developer.getFullName.bind(frontEnd);
 console.log(getfullName());
 
+// Demo 1B 
+// Inherit the all method and propertiest of Primary method
+frontEnd.__proto__ = Developer;
+console.log(frontEnd.getFullName()); // Niel Fernandez 
+console.log(frontEnd.advancetage); // true
+
 // Demo 2 
 function multiply(a,b) {
   return a*b;
@@ -95,10 +101,13 @@ console.log(dataTesterUser('Correct!'));
 ```JS
  // Console.log() | Result 
  Niel Zednanref
- 
+-----------------------------------------------------
+ Niel Zednanref
+ True
+----------------------------------------------------- 
  8
  100
- 
+----------------------------------------------------- 
 one,tine are a plural store in array Correct!
 Tame is a singular not array Correct!
 ```
