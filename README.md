@@ -48,3 +48,47 @@ new RequestForm();
 // Console.log() | Result
 User_name: niel password: 143
 ```
+
+FUNCTION BIND
+
+```JS
+const Developer = {
+  firstName:"Jhon",
+  lastName: "Doe",
+  getFullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const frontEnd = {
+  firstName:"Niel",
+  lastName: "Zednanref",
+}
+
+let getfullName = Developer.getFullName.bind(frontEnd);
+console.log(getfullName());
+
+// Demo 2 
+function multiply(a,b) {
+  return a*b;
+}
+
+let multiplyByTwo = multiply.bind(this, 2);
+console.log(multiplyByTwo(4)); // Result 8
+
+let multiplyByTen = multiply.bind(this, 10);
+console.log(multiplyByTen(10)); // Result 100
+```
+
+```JS
+ // Console.log() | Result 
+ Niel Zednanref
+ 
+ 8
+ 100
+```
+
+```JS
+// Similar to Borrowing Method Object 
+https://github.com/nielsoffice/JSBorrowingMethod_Object
+```
