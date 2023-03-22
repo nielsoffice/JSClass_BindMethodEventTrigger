@@ -120,3 +120,17 @@ Tame is a singular not array Correct!
 // Similar to Borrowing Method Object 
 https://github.com/nielsoffice/JSBorrowingMethod_Object
 ```
+
+```JS
+// Master Object
+const primaryObjectName = { ... };
+
+// child Object
+const childObjectName = { ... };
+
+// Inherit childObject from MasterObject
+// this methodName();
+// Once they click eventListerner methodName will run to childObject as it is inherit from
+// the master object the method name methodName();
+element.eventListener('click', primaryObjectName.methodName.bind(childObjectName));
+```
