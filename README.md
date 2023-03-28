@@ -52,6 +52,22 @@ User_name: niel password: 143
 FUNCTION BIND
 
 ```JS
+ const handler = function(e, param1) {
+    
+ // console.log(e.preventDefault());
+ console.log(param1);
+
+ }
+
+ // This might wrong, 
+ // element.addEventListerner('mouseover' , function(e, param1) { handler(e, param1) } );
+
+ // This is how to use bind in this case ! or as anonymouse function instead!
+ element.addEventListerner('mouseover' , handler.bind(param1) );
+ element.addEventListerner('mouseout' , handler.bind(param1) );
+```
+
+```JS
 const Developer = {
   firstName:"Jhon",
   lastName: "Doe",
